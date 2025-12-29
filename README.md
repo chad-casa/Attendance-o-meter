@@ -25,9 +25,9 @@ Insights are limited to the university and not readily accessble by users or thi
 The Attendance-o-meter seeks to provide a frictionless solution to counting the number of students who attend the class to provide insights to management.
 
 # Introduction – Project Attendance-o-meter
-Project Attendance-o-meter explores developing an IoT system to sense, network and display attendance data on an LCD screen. In this project we will use an Arduino MKR1010 Wi-Fi enabled microprocessor linked to the CE controlled by RGB MQTT messages - to develop an IoT system to flag poor classroom ventilation using CO2 ppm as our key indicator.
+Project Attendance-o-meter explores developing an IoT system to sense and react to the environment. network and display attendance data on an LCD screen. In this project we will use an Arduino MKR1010 Wi-Fi enabled microprocessor linked to the CE controlled by RGB MQTT messages - to develop an IoT system to anonymously monitor classroom attendance using zonal object detection from a mmwave sensor as our key indicator.
 
-“The Internet of Things or IoT is the network of devices such as vehicles and home appliances that contain electronics software sensors actuators and connectivity which allows these things to connect interact and exchange data.” Kevin Ashton.
+For context, “the Internet of Things or IoT is the network of devices such as vehicles and home appliances that contain electronics software sensors actuators and connectivity which allows these things to connect interact and exchange data.” Kevin Ashton.
 
 Simply put:
 
@@ -36,10 +36,10 @@ Simply put:
 </p>
 
 # System Overview
-In the case of Project Vespera, we develop our own IoT system where:
+In the case of Project Attendance-o-meter, we develop our own IoT system where:
 
 <p align="center">
-<b>Vespera Luminaire + CO2 sensor (Hailege ENS160) + Arduino MKR1010 Wi-Fi / MQTT = Vespera IoT</b>
+<b>LCD Screen + 24GHz mmWave Sensor from XIAO + Arduino MKR1010 Wi-Fi / MQTT = Attendance-o-meter IoT</b>
 </p>
 
 # How does it work? 
@@ -49,10 +49,10 @@ In the case of Project Vespera, we develop our own IoT system where:
 
 ## The Attendance-o-meter IoT system
 <b>1.	Stimulus</b>
-+ CO2: The atmosphere contains CO2, its concentration is measured in parts per million
++ Person moving: The detection area is temporarily filled with a person moving towards or away fromt he sensor and its detection area, the change in distance is measured in millimeters and is mapped to an algortihm which decides whether motion detected is sufficent to warrant counting an individual entering or exiting the space.
 
 <b>2.	Data collection system (See Breadboard device below)</b>
-+	Sensor: CO2 sensor Adafruit ENS160 MOX (metal oxide) Gas Sensor Detects CO2 concentration in the atmosphere by measuring the change in current caused by the atmosphere making contact with the hot plate on the circuit, this is communicated to the Arduino by I2C (the SDA and SCL wires). By default readings are observed at intervals measured in milliseconds.
++	Sensor: 24GHz mmWave Sensor from XIAO detects..... CO2 concentration in the atmosphere by measuring the change in current caused by the atmosphere making contact with the hot plate on the circuit, this is communicated to the Arduino by I2C (the SDA and SCL wires). By default readings are observed at intervals measured in milliseconds.
 +	Microcontroller Unit: The Arduino MKR 1010 microcontroller unit has multiple libraries installed enabling it to connect to Wi-Fi using Wi-FiNINA with a secrets file Arduino_secrets.h, PubSubClient To publish and subscribe to specific topic channels
 
 <b>3.	Connectivity</b>
@@ -70,14 +70,15 @@ In the case of Project Vespera, we develop our own IoT system where:
 
 
   # Component Breakdown
-- **Physical Object- Vespera:** [Vespera](https://github.com/ucl-casa-ce/casa0014/tree/cc7aed6253ad8d2e7b3fdea0c4e44cc227731e9e/vespera#vespera) is a light or luminaire created by Duncan Wilson comprised of 72 NeoPixel LEDs which can be controlled by MQTT messages with RGB payloads. 
 -	**Breadboard**
-  -	**Sensor – ENS160:** Hailege ENS160+AHT21 is a CO2 sensor measuring eCO2 PPM
+  -	**Sensor – 24GHz mmWave Sensor from XIAO:** A milimeter wave sensor measuring distance covered by moving and static people
   -	**Connectivity enabled microcontroller – Arduino:** Arduino MKR1010 is a Wi-Fi enabled micro controller capable of sending MQTT messages.
 -	**MQTT Broker** (mqtt.cetools.org)
--	**Web Viewer** (https://www.iot.io/projects/lumi/)
+-	**Display** LCD Screen
 
   # Assembly
++Circuit diagram
+
 Follow the steps illustrated by the attached ADAFruit literature.
 https://cdn-learn.adafruit.com/downloads/pdf/adafruit-ens160-mox-gas-sensor.pdf
 
@@ -89,6 +90,12 @@ Combined it should look like so:
 - SDA to SDA (Serial Data Line)
 
 <img width="745" height="564" alt="image" src="https://github.com/user-attachments/assets/b134e1c6-66df-411f-84c4-4ab0b125a0aa" />
+
+  # Enclosure
++ Layer 1: Plastic - to provide a splash guard from any potential liquid spills
++ Layer 2: Foil - to prevent double counting orunderreporting caused by any operator behind the sensor 
++ Layer 3: Paper - asthetic
++ Layer 4: Felt - To provide an indoor asthetic that blends in and feels less industrial and more consumer friendly 
 
 # Test Scripts – Does it work?
 
