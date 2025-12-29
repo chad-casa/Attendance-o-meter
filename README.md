@@ -65,11 +65,10 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 +	MQTT Broker: (Mqtt.cetools.org) receives the published payload and if the credentials are correct, it will relay the message to the device display.
 
 <b>4.	Data Display </b>
-+	Physical: LCD screen is updated by the serial data output.
-+	Virtual: (IoT.io/projects/lumi/) illustrates the equivalent display shown by the physical luminaire in CASA00014 classroom.
-+	Function: 3 LEDs are lit each hour with the colour reflecting the CO2 levels (CO2 <450PPm = Green, CO2 451-750ppm = Orange, CO2 >751 = Red).
++	Physical: LCD screen is updated by the JSON serial data output.
++	Function: LCD Screen flashes green when attendee enters the detection area and In tally adjusts accordingly. LCD flashes red when attendee exits the detection area leading to the out tally increasing.
++	The difference between in and out is the number of people in the room or current occupancy.
 +	New observations are appended until session is terminated by operator by typing'r' to reset the session in the Arduino IDE output console.
-  
 
   # Component Breakdown
 -	**Breadboard**
