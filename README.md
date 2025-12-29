@@ -1,5 +1,5 @@
 # Attendance-o-meter
-Homemade mmwave people counter to assist occupancy measurement.
+Homemade mmwave people counter to assist room occupancy measurement.
 
 # Repository contents
 -	[Context – Attendance-o-meter](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md)
@@ -25,7 +25,7 @@ Insights are limited to the university and not readily accessble by users or thi
 The Attendance-o-meter seeks to provide a frictionless solution to counting the number of students who attend the class to provide insights to management.
 
 # Introduction – Project Attendance-o-meter
-Project Attendance-o-meter explores developing an IoT system to sense and react to the environment. network and display attendance data on an LCD screen. In this project we will use an Arduino MKR1010 Wi-Fi enabled microprocessor linked to the CE controlled by RGB MQTT messages - to develop an IoT system to anonymously monitor classroom attendance using zonal object detection from a mmwave sensor as our key indicator.
+Project Attendance-o-meter explores developing an IoT system to sense, network and react to the environment by displaying attendance data on an LCD screen. In this project we will use an Arduino MKR1010 Wi-Fi enabled microprocessor linked to the CE controlled by MQTT messages - to develop an IoT system to anonymously monitor classroom attendance using zonal people detection from a mmwave sensor as our key indicator.
 
 For context, “the Internet of Things or IoT is the network of devices such as vehicles and home appliances that contain electronics software sensors actuators and connectivity which allows these things to connect interact and exchange data.” Kevin Ashton.
 
@@ -49,10 +49,12 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 
 ## The Attendance-o-meter IoT system
 <b>1.	Stimulus</b>
-+ Person moving: The detection area is temporarily filled with a person moving towards or away fromt he sensor and its detection area, the change in distance is measured in millimeters and is mapped to an algortihm which decides whether motion detected is sufficent to warrant counting an individual entering or exiting the space.
++ Attendees (Human body): The detection area is temporarily filled with a person moving towards or away from the sensor and its detection area, the change in distance is measured in millimeters and is mapped to an algortihm which decides whether motion detected is sufficent to warrant counting an individual entering or exiting the space. Static humans are not counted as entering or exiting the space unless a minimum distance threshold is met.
 
 <b>2.	Data collection system (See Breadboard device below)</b>
-+	Sensor: 24GHz mmWave Sensor from XIAO detects..... CO2 concentration in the atmosphere by measuring the change in current caused by the atmosphere making contact with the hot plate on the circuit, this is communicated to the Arduino by I2C (the SDA and SCL wires). By default readings are observed at intervals measured in milliseconds.
++	Sensor: 24GHz mmWave Sensor from XIAO detects.....
++	CO2 concentration in the atmosphere by measuring the change in current caused by the atmosphere making contact with the hot plate on the circuit, this is communicated to the Arduino by I2C (the SDA and SCL wires).
++	 By default readings are observed at intervals measured in milliseconds.
 +	Microcontroller Unit: The Arduino MKR 1010 microcontroller unit has multiple libraries installed enabling it to connect to Wi-Fi using Wi-FiNINA with a secrets file Arduino_secrets.h, PubSubClient To publish and subscribe to specific topic channels
 
 <b>3.	Connectivity</b>
