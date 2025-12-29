@@ -18,20 +18,14 @@ Homemade mmwave people counter to assist occupancy measurement.
 -	[Sources](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#sources)
 
 # Context – Attendance-o-meter
-Struggling to focus in class? You might not be the only one! Recognise poor ventilation instantly, with just one glance at Vespera.
+Attendance is a key business performance indicator for universities, it is currently measured using a the SEAtS App which currently has a one star rating on Apple and the Google Play store.
+Users report a lack of functionality, high consequences for incorrect attendance monitoring [expulson/deportation](https://www.ucl.ac.uk/students/sites/students/files/ucl_student_visa_responsibilities_2022_final.pdf) and lecturers having to resort to manual counting during class times.
+Insights are limited to the university and not readily accessble by users or third parties.      
 
-Poor ventilation boosts CO2 concentration and reduces [cognitive function](https://www.sciencedirect.com/science/article/pii/S0360132319302422). This means reduced concentration and increased sleepiness impacting participation and information retention. 
-
-For an optimal study climate this winter, don’t sacrifice focus for warmth, know exactly when to ventilate the room with Vespera.
-
-![20251025_114548](https://github.com/user-attachments/assets/a6d9c6d9-a619-4ef0-9bcb-a3653b7ba65d)
-![20251025_114632](https://github.com/user-attachments/assets/76e40421-c275-4c8b-96b7-e97c9aaabdd7)
-![20251025_114642](https://github.com/user-attachments/assets/23a486bb-86ce-4129-8296-8082f53e42e7)
-![20251025_114652](https://github.com/user-attachments/assets/a5fe56b1-2f28-4668-b4d9-b1a3afd83401)
-![20251025_114659](https://github.com/user-attachments/assets/163dd6b6-6092-4de5-8950-824ca8b8d49e)
+The Attendance-o-meter seeks to provide a frictionless solution to counting the number of students who attend the class to provide insights to management.
 
 # Introduction – Project Attendance-o-meter
-Project Vespera explores developing an IoT system to sense, network and control a Luminaire called Vespera. In this project we will use Vespera - a Wi-Fi enabled luminaire controlled by RGB MQTT messages - to develop an IoT system to flag poor classroom ventilation using CO2 ppm as our key indicator.
+Project Attendance-o-meter explores developing an IoT system to sense, network and display attendance data on an LCD screen. In this project we will use an Arduino MKR1010 Wi-Fi enabled microprocessor linked to the CE controlled by RGB MQTT messages - to develop an IoT system to flag poor classroom ventilation using CO2 ppm as our key indicator.
 
 “The Internet of Things or IoT is the network of devices such as vehicles and home appliances that contain electronics software sensors actuators and connectivity which allows these things to connect interact and exchange data.” Kevin Ashton.
 
@@ -51,8 +45,7 @@ In the case of Project Vespera, we develop our own IoT system where:
 # How does it work? 
   
   # Architecture
-<img width="22830" height="7297" alt="Vespera IoT Systems Architecture XL" src="https://github.com/user-attachments/assets/f94c20a1-6367-41d5-a0e9-b9598b84c498" />
-
+<img width="7610" height="2432" alt="image" src="https://github.com/user-attachments/assets/f3bea579-74b9-4c3c-9160-0a1c22e22848" />
 
 ## The Attendance-o-meter IoT system
 <b>1.	Stimulus</b>
