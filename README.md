@@ -49,16 +49,17 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 
 ## The Attendance-o-meter IoT system
 <b>1.	Stimulus</b>
-+ Attendees (Human body): The detection area is temporarily filled with a person moving towards or away from the sensor and its detection area, the change in distance is measured in millimeters and is mapped to an algortihm which decides whether motion detected is sufficent to warrant counting an individual entering or exiting the space. Static humans are not counted as entering or exiting the space unless a minimum distance threshold is met.
++ Attendees (Human body): The detection area (750mm - 6000mm) is temporarily filled with a person moving towards or away from the sensor, the change in distance is measured in millimeters and is mapped to an algortihm which decides whether motion detected is sufficent to warrant counting an individual entering or exiting the space. A minimum distance threshold (300mm) must be met for an attendee to be counted as 'In' or 'Out', where the threshold is not met observations are classified as 'Static' and are not counted as entering (In) or exiting (Out) the space.
 
 <b>2.	Data collection system (See Breadboard device below)</b>
-+	Sensor: 24GHz mmWave Sensor from XIAO detects.....
-+	CO2 concentration in the atmosphere by measuring the change in current caused by the atmosphere making contact with the hot plate on the circuit, this is communicated to the Arduino by I2C (the SDA and SCL wires).
-+	 By default readings are observed at intervals measured in milliseconds.
++	Sensor: 24GHz mmWave Sensor from XIAO detects the human body by continuously emmitting out 24GHz ~ 24.25GHz millimeterwave electromagnetic waves which reflect off the subject ion the detection area tracking static people and micromovements.
++	Logic: Movement from Near to Far is considered as entry to the space, movement from Far to Near is considered exit from the space. Near is defined as <1500mm and Far is defined as >3000mm. This is communicated to the Arduino by serial communication (the RX receieve and TX transmit wires).
++	Readings take 800 ms to begin tracking and allow for 4000ms to cross between Near and Far zones wiht a 2000ms cooldown period before counting again to prevent double counting.
++	3 consecutive measurements at the same distanc elead toi a static reading which is therefore not counted.
 +	Microcontroller Unit: The Arduino MKR 1010 microcontroller unit has multiple libraries installed enabling it to connect to Wi-Fi using Wi-FiNINA with a secrets file Arduino_secrets.h, PubSubClient To publish and subscribe to specific topic channels
 
 <b>3.	Connectivity</b>
-+	Payload: The readings from the sensor are processed by the microcontroller using multiple libraries including ScioSense_ENS160 and utility/wifi_drv. With RGB values linked to CO2 PPM thresholds and corresponding hexadecimal payload values, we can send MQTT messages over Wi-Fi.
++	Payload: The readings from the sensor are processed by the microcontroller using multiple libraries including MMWave, Wire and utility/wifi_drv. With RGB values linked to CO2 PPM thresholds and corresponding hexadecimal payload values, we can send MQTT messages over Wi-Fi.
 +	WIFI Gateway: CE-Wi-Fi located in One Pool Street
 +	Tilt Controller: Receives the MQTT payload via WIFI and selects which topic the Vespera luminaires is subscribed. The payload is then published to the coded topic e.g. #6 and sent to the MQTT Broker.
 +	MQTT Broker: (Mqtt.cetools.org) receives the published payload and if the credentials are correct, it will relay the message to the Vespera Luminare assigning the relevant LED configuration to reflect the CO2 observation.
