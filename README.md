@@ -55,7 +55,7 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 +	Sensor: 24GHz mmWave Sensor from XIAO detects the human body by continuously emmitting out 24GHz ~ 24.25GHz millimeterwave electromagnetic waves which reflect off the subject ion the detection area tracking static people and micromovements.
 +	Logic:
     -	Movement from Near to Far is considered as entry to the space, movement from Far to Near is considered exit from the space. Near is defined as <1500mm and Far is defined as >3000mm. This is communicated to the Arduino by serial communication (the RX receieve and TX transmit wires).
-    -	Readings take 800 ms to begin tracking and allow for 4000ms to cross between Near and Far zones with a 2000ms cooldown period before counting again to prevent double counting.
+    -	Readings take 800ms to begin tracking and allow for 4000ms to cross between Near and Far zones with a 2000ms cooldown period before counting again to prevent double counting.
     -	Three consecutive measurements at the same distance lead to a static reading, which is therefore discounted.
 +	Microcontroller Unit: The Arduino MKR 1010 microcontroller unit has multiple libraries installed enabling it to connect to Wi-Fi using Wi-FiNINA with a secrets file Arduino_secrets.h, PubSubClient To publish and subscribe to specific topic channels
 
