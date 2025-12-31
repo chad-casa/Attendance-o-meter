@@ -35,7 +35,7 @@ Simply put:
 <b>Physical object(s) + sensors (or actuators) + network connectivity = IoT</b>
 </p>
 
-# System Overview
+# Design
 In the case of Project Attendance-o-meter, we develop our own IoT system where:
 
 <p align="center">
@@ -70,6 +70,7 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 +	The difference between in and out is the number of people in the room or current occupancy.
 +	New observations are appended until session is terminated by operator by typing'r' to reset the session in the Arduino IDE output console.
 
+# Build
   # Component Breakdown
 -	**Breadboard**
   -	**Sensor – 24GHz mmWave Sensor from XIAO:** A milimeter wave sensor measuring distance covered by moving and static people
@@ -102,6 +103,7 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 + **Layer 3: Paper** - To hide contents of the device and wiring from public view
 + **Layer 4: Felt** - To provide an indoor asthetic that blends in and feels less industrial and more consumer friendly 
 
+# Functionality
 # Test Scripts – Does it work?
 
 1. Does the board work? Use the [Blink](https://github.com/chad-casa/Vespera_IoT/blob/8df0a0b58fe31e11d76ad6d3414e8fec8753c69a/Tests/Blink.ino) script to tested the Arduino MKR1000's functionality
