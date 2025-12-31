@@ -111,7 +111,6 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 3. Can it send MQTT messages? Use the [MQTT Simple](https://github.com/ucl-casa-ce/casa0014/blob/cc7aed6253ad8d2e7b3fdea0c4e44cc227731e9e/vespera/workshop-sketch/mkr1010_mqtt_simple/mkr1010_mqtt_simple.ino) Sketch
 
 4. Does the mmwave sensor work? Use The Manufacturer's HLKRadarTool App and adjust the baud rate to 256000. For the exact instructions follow [this link](https://wiki.seeedstudio.com/mmwave_for_xiao/) 
-<img width="959" height="562" alt="image" src="https://github.com/user-attachments/assets/1e0c6453-26c5-4c25-958d-ce4c45b5d6e4" />
 
 5. Are they received by the LCD screen Vespera Luminaire? Use [Waveshare_LCD1602_RGB.h](https://github.com/ucl-casa-ce/casa0014/blob/cc7aed6253ad8d2e7b3fdea0c4e44cc227731e9e/vespera/luminaire_mkr1010_controller/luminaire_mkr1010_controller.ino) sketch and observe the data flows in MQTT explorer and the physical LCD Screen.
 
