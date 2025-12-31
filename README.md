@@ -2,20 +2,20 @@
 Homemade mmwave people counter to assist room occupancy measurement.
 
 # Repository contents
--	[Context – Attendance-o-meter](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md)
--	[Introduction - Project Attendance-o-meter](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#introduction--project-vespera)
--	[System Overview](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#system-overview)
--	[How does it work?](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#how-does-it-work)
-- [Architecture](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#architecture)
+-	[Context – Attendance-o-meter](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md#context--attendance-o-meter)
+-	[Introduction - Project Attendance-o-meter](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md#introduction--project-attendance-o-meter)
+-	[System Overview](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md#system-overview)
+-	[How does it work?](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md#how-does-it-work)
+- [Architecture](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md#architecture)
 - [The Attendance-o-meter IoT system](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#the-vespera-iot-system)
-- [Component breakdown ](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#component-breakdown)
-- [Assembly](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#assembly)
--	[Test Scripts – Does it work?](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#test-scripts--does-it-work)
--	[Arduino Code](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#arduino-code)
--	[Evaluation](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#evaluation)
--	[Road Map](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#road-map)
--	[Assumptions](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#assumptions)
--	[Sources](https://github.com/chad-casa/Vespera_IoT/blob/main/README.md#sources)
+- [Component breakdown ](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md#component-breakdown)
+- [Assembly](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md#assembly)
+-	[Test Scripts – Does it work?](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md#test-scripts--does-it-work)
+-	[Arduino Code](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md#arduino-code)
+-	[Evaluation](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md#evaluation)
+-	[Road Map](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md#road-map)
+-	[Assumptions](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md#assumptions)
+-	[Sources](https://github.com/chad-casa/Attendance-o-meter/blob/main/README.md#sources)
 
 # Context – Attendance-o-meter
 Attendance is a key business performance indicator for universities, it is currently measured using a the SEAtS App which currently has a one star rating on Apple and the Google Play store.
