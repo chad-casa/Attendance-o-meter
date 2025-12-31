@@ -95,11 +95,12 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 - TX Arduino (transmit) to RX MMWave Sensor (receive)
 - TX Sensor (transmit) to RX Arduino (receive)
 
-  # Enclosure
-+ Layer 1: Plastic - To provide a splash guard from any potential liquid spills
-+ Layer 2: Foil - To function as a metal shield to prevent interference (double counting or underreporting) caused by any operator behind the sensor, as advised by the manufacturer (https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz_mmWave_for_XIAO-Datasheet-V1.00.pdf)  
-+ Layer 3: Paper - To hide contents of the device and wiring from public view
-+ Layer 4: Felt - To provide an indoor asthetic that blends in and feels less industrial and more consumer friendly 
+ # Enclosure
+  The device casing should allow mmwaves from the sensor to travel freely to the detection area to validate human presence. Materials used in front of the sensor should allow for ease of wave transmission and limit relfect and refraction. Behind the sensor a metal guard is used to ensure the observation area is limited to what is in front of the sensor.
++ **Layer 1: Plastic** - To provide a splash guard from any potential liquid spills
++ **Layer 2: Foil** - To function as a metal shield to prevent interference (double counting or underreporting) caused by any operator behind the sensor, as advised by the [manufacturer] (https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz_mmWave_for_XIAO-Datasheet-V1.00.pdf)  
++ **Layer 3: Paper** - To hide contents of the device and wiring from public view
++ **Layer 4: Felt** - To provide an indoor asthetic that blends in and feels less industrial and more consumer friendly 
 
 # Test Scripts – Does it work?
 
