@@ -78,21 +78,21 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 -	**Display** LCD Screen
 
   # Assembly
+1. Solder male pins to the bottom of the MMWave Sensor
+2. Connect the cirucit using the diagram and wiring instructions below
+   
 +Circuit diagram
+<img width="5200" height="7104" alt="Attendance-o-meter circuit diagram" src="https://github.com/user-attachments/assets/b92cd83b-8147-4835-bfd7-9b2d4168a3f2" />
 
-
-Follow the steps illustrated by the attached ADAFruit literature.
-https://cdn-learn.adafruit.com/downloads/pdf/adafruit-ens160-mox-gas-sensor.pdf
-
-Combined it should look like so:
+Wiring:
 
 - VCC Arduino to +ve breadboard (Voltage In)
 - GND Arduino to -ve breadboard (Ground)
 - SCL Ardunio to SCL LED (Serial Clock Line)
 - SDA Arduino to SDA LED (Serial Data Line)
-- 3V3 Sensor to +ve breadboard (Voltage In)
-- GND Sensor to -ve breadboard (Ground)
-- TX Arduino (transmit) to RX Sensor (receive)
+- 3V3 MMWave Sensor to +ve breadboard (Voltage In)
+- GND MMWave Sensor to -ve breadboard (Ground)
+- TX Arduino (transmit) to RX MMWave Sensor (receive)
 - TX Sensor (transmit) to RX Arduino (receive)
 
 <img width="745" height="564" alt="image" src="https://github.com/user-attachments/assets/b134e1c6-66df-411f-84c4-4ab0b125a0aa" />
