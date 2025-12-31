@@ -80,22 +80,27 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
   # Assembly
 +Circuit diagram
 
+
 Follow the steps illustrated by the attached ADAFruit literature.
 https://cdn-learn.adafruit.com/downloads/pdf/adafruit-ens160-mox-gas-sensor.pdf
 
 Combined it should look like so:
 
-- 5V to VIN (Voltage In)
-- GND to GND (Ground)
-- SCL to SCL (Serial Clock Line)
-- SDA to SDA (Serial Data Line)
+- VCC Arduino to +ve breadboard (Voltage In)
+- GND Arduino to -ve breadboard (Ground)
+- SCL Ardunio to SCL LED (Serial Clock Line)
+- SDA Arduino to SDA LED (Serial Data Line)
+- 3V3 Sensor to +ve breadboard (Voltage In)
+- GND Sensor to -ve breadboard (Ground)
+- TX Arduino (transmit) to RX Sensor (receive)
+- TX Sensor (transmit) to RX Arduino (receive)
 
 <img width="745" height="564" alt="image" src="https://github.com/user-attachments/assets/b134e1c6-66df-411f-84c4-4ab0b125a0aa" />
 
   # Enclosure
-+ Layer 1: Plastic - to provide a splash guard from any potential liquid spills
-+ Layer 2: Foil - to prevent double counting orunderreporting caused by any operator behind the sensor 
-+ Layer 3: Paper - asthetic
++ Layer 1: Plastic - To provide a splash guard from any potential liquid spills
++ Layer 2: Foil - To function as a metal shield to prevent interference (double counting or underreporting) caused by any operator behind the sensor, as advised by the manufacturer (https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz_mmWave_for_XIAO-Datasheet-V1.00.pdf)  
++ Layer 3: Paper - To hide contents of the device and wiring from public view
 + Layer 4: Felt - To provide an indoor asthetic that blends in and feels less industrial and more consumer friendly 
 
 # Test Scripts – Does it work?
