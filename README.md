@@ -95,8 +95,6 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 - TX Arduino (transmit) to RX MMWave Sensor (receive)
 - TX Sensor (transmit) to RX Arduino (receive)
 
-<img width="745" height="564" alt="image" src="https://github.com/user-attachments/assets/b134e1c6-66df-411f-84c4-4ab0b125a0aa" />
-
   # Enclosure
 + Layer 1: Plastic - To provide a splash guard from any potential liquid spills
 + Layer 2: Foil - To function as a metal shield to prevent interference (double counting or underreporting) caused by any operator behind the sensor, as advised by the manufacturer (https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz_mmWave_for_XIAO-Datasheet-V1.00.pdf)  
