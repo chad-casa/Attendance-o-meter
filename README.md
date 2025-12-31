@@ -81,10 +81,10 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 1. Solder male pins to the bottom of the MMWave Sensor
 2. Connect the cirucit using the diagram and wiring instructions below
    
-+Circuit diagram
+ # Circuit Diagram
 <img width="5200" height="7104" alt="Attendance-o-meter circuit diagram" src="https://github.com/user-attachments/assets/b92cd83b-8147-4835-bfd7-9b2d4168a3f2" />
 
-Wiring:
+ # Wiring
 
 - VCC Arduino to +ve breadboard (Voltage In)
 - GND Arduino to -ve breadboard (Ground)
