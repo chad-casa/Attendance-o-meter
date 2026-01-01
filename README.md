@@ -121,9 +121,12 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
    
 # Arduino Code
 1. There is [limited if any base code](https://github.com/Seeed-Studio/Seeed_Arduino_24GHz_Radar_Sensor) provided by the manufacturer or locatable in the existing Arduino library for the 24ghz mmwave sensor.
+
 2. Whilst presence detection is possible with the manufacturer app, custom logic has to be devised to enable people counting.
+
 3. Detection Zone's
 <img width="559" height="108" alt="image" src="https://github.com/user-attachments/assets/ad123c9d-7230-4782-b5c0-ebfa8c9c5ed1" />
+
 4. Direction of travel logic (entry or exit)
    <img width="534" height="96" alt="image" src="https://github.com/user-attachments/assets/d80e91d3-a3ee-4a23-84bb-6518a135865d" />
 
@@ -136,11 +139,13 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 <img width="365" height="76" alt="image" src="https://github.com/user-attachments/assets/1802f773-d921-4a0f-8082-7494074781b3" />
 
 7.  Claude.ai used to help bridge logic into code
+
 8.  MQTT publishing observable via MQTT Explorer - publishing to topic 6
    <img width="543" height="102" alt="image" src="https://github.com/user-attachments/assets/138a9464-187b-46f4-afbd-484480f5bb22" />
 
-10.  [Final code]( is uploaded to the device and device is stationary on desk and plugged into laptop with Arduino IDE interface
-11.  Future iterations can subscribe their Grafana visualisation to the MQTT broker to enable occupancy insights to be shared virtually beyond the room / view of the devices' LCD display
+9.  [Final code]( is uploaded to the device and device is stationary on desk and plugged into laptop with Arduino IDE interface
+
+10.  Future iterations can subscribe their Grafana visualisation to the MQTT broker to enable occupancy insights to be shared virtually beyond the room / view of the devices' LCD display
 
 # Evaluation
 
