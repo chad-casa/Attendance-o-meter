@@ -128,7 +128,7 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 <img width="559" height="108" alt="image" src="https://github.com/user-attachments/assets/ad123c9d-7230-4782-b5c0-ebfa8c9c5ed1" />
 
 4. Direction of travel logic (entry or exit)
-   <img width="534" height="96" alt="image" src="https://github.com/user-attachments/assets/d80e91d3-a3ee-4a23-84bb-6518a135865d" />
+<img width="534" height="96" alt="image" src="https://github.com/user-attachments/assets/d80e91d3-a3ee-4a23-84bb-6518a135865d" />
 
 5.False positive and double counting risk minimisation
 <img width="669" height="76" alt="image" src="https://github.com/user-attachments/assets/4d4735bd-2c3b-4d9c-aa6e-97ea7cfc8602" />
