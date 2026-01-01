@@ -130,15 +130,15 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 4. Direction of travel logic (entry or exit)
 <img width="534" height="96" alt="image" src="https://github.com/user-attachments/assets/d80e91d3-a3ee-4a23-84bb-6518a135865d" />
 
-5.False positive and double counting risk minimisation
+5. False positive and double counting risk minimisation
 <img width="669" height="76" alt="image" src="https://github.com/user-attachments/assets/4d4735bd-2c3b-4d9c-aa6e-97ea7cfc8602" />
 
 <img width="364" height="97" alt="image" src="https://github.com/user-attachments/assets/6713d3dc-2b48-4e3a-b9a9-019743d0bb69" />
 
-6.LCD monitor display colour changes to match change in room occupancy. Red = Out , Green = In.
+6. LCD monitor display colour changes to match change in room occupancy. Red = Out , Green = In.
 <img width="365" height="76" alt="image" src="https://github.com/user-attachments/assets/1802f773-d921-4a0f-8082-7494074781b3" />
 
-7.  Claude.ai used to help bridge logic into code
+7. Claude.ai used to help bridge logic into code
 
 8.  MQTT publishing observable via MQTT Explorer - publishing to topic 6
    <img width="543" height="102" alt="image" src="https://github.com/user-attachments/assets/138a9464-187b-46f4-afbd-484480f5bb22" />
