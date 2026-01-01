@@ -106,15 +106,20 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 # Functionality
 # Test Scripts – Does it work?
 
-1. Does the board work? Use the [Blink](https://github.com/chad-casa/Vespera_IoT/blob/8df0a0b58fe31e11d76ad6d3414e8fec8753c69a/Tests/Blink.ino) script to tested the Arduino MKR1000's functionality
+1. Does the board work? Use the [Blink](Tests/Blink.ino) script to tested the Arduino MKR1000's functionality
 
-2. Can it connect to WI-FI? Use the [SimpleWifi tester](https://github.com/chad-casa/Vespera_IoT/blob/8b2bf5f1b79ee9ebf1dc66fb2b9969085085122d/Tests/SimpleWebServerWiFi-webled-mkr1010.ino) Arduino code to validate that the device can connect to the internet over WI-FI 
+2. Can it connect to WI-FI? Use the [SimpleWifi tester](Tests/SimpleWebServerWiFi-webled-mkr1010.ino) Arduino code to validate that the device can connect to the internet over WI-FI 
 
-3. Can it send MQTT messages? Use the [MQTT Simple](https://github.com/ucl-casa-ce/casa0014/blob/cc7aed6253ad8d2e7b3fdea0c4e44cc227731e9e/vespera/workshop-sketch/mkr1010_mqtt_simple/mkr1010_mqtt_simple.ino) Sketch
+3. Can it send MQTT messages? Use the [MQTT Simple](Tests/mkr1010_mqtt_simple.ino) Sketch
 
-4. Does the mmwave sensor work? Use The Manufacturer's HLKRadarTool App and adjust the baud rate to 256000. For the exact instructions follow [this link](https://wiki.seeedstudio.com/mmwave_for_xiao/) 
+4. Does the mmwave sensor work? Use The Manufacturer's HLKRadarTool App and adjust the baud rate to 256000. For the exact instructions follow [this link](https://wiki.seeedstudio.com/mmwave_for_xiao/)
+   - A functioning sensor will provide readings impacting Energy Thresholds for example:
+  <img width="671" height="1256" alt="image" src="https://github.com/user-attachments/assets/6c3d5d83-3165-448b-8e46-f0ce6d4595d6" />
+ 
 
-5. Are they received by the LCD screen Vespera Luminaire? Use [Waveshare_LCD1602_RGB.h](https://github.com/ucl-casa-ce/casa0014/blob/cc7aed6253ad8d2e7b3fdea0c4e44cc227731e9e/vespera/luminaire_mkr1010_controller/luminaire_mkr1010_controller.ino) sketch and observe the data flows in MQTT explorer and the physical LCD Screen.
+6. Does the physcial LCD display work? Use [Waveshare_LCD1602_RGB.h](Tests/Waveshare_LCD1602_RGB.cpp) sketch and observe the function of the physical LCD Screen.
+   
+7. 
 
 # Arduino Code
 1.  Initial merge MQTT Simple, Luminaire and ENS160 sketches using Claude.ai
