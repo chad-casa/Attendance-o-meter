@@ -143,7 +143,7 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 8.  MQTT publishing observable via MQTT Explorer - publishing to topic 6
    <img width="543" height="102" alt="image" src="https://github.com/user-attachments/assets/138a9464-187b-46f4-afbd-484480f5bb22" />
 
-9.  [Final code]( is uploaded to the device and device is stationary on desk and plugged into laptop with Arduino IDE interface
+9.  [Final code](Arduino_code/Attendance-o-meter.ino) is uploaded to the device and device is stationary on desk and plugged into laptop with Arduino IDE interface
 
 10.  Future iterations can subscribe their Grafana visualisation to the MQTT broker to enable occupancy insights to be shared virtually beyond the room / view of the devices' LCD display
 
