@@ -172,6 +172,12 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 3. Create wireless version of product for travel
 
 ## Assumptions
+- Foil barrier sufficiently prevents operator detection
+- Refraction caused by casing materials is limited and doesn't cause erroneous readings
+- Single room entry point
+- Target subject will cross both zones in the 4000ms observation period.
+- One subject passes through the detection area at a time with an 800ms gap to begin a new observation
+- Device is placed by room entry point where subject movement from NEAR to FAR Zone = Entry (in) and movement FAR to NEAR Zone = Exit (out)
 - Good WI-FI signal
 - Access to wired power
 - Data privacy is not an important risk
@@ -182,14 +188,15 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 + Low cost
   
 ## Why MQTT?
-**Message Queue Telemetry Transport** is a publish and subscribe model protocol where the broker decouples senders and receivers, so they don’t need to know about one another. Benefits for CO2 sensing, small message size and continuous connection. The publish – subscribe model enables the storage of messages which ensures reliability
-Low latency is not necessary due to the low frequency of sensing required. Large flows, energy efficiency is not imperative as the device is designed for indoor use so a wireless power source is not necessary and people in the environment are sedentary and in close proximity to the sensor for prolonged periods. 
-Data transferred is not highly sensitivity so weak security or no default encryption is not a concern.
+**Message Queue Telemetry Transport** is a publish and subscribe model protocol where the broker decouples senders and receivers, so they don’t need to know about one another. Benefits for People counting, small message size and continuous connection. The publish – subscribe model enables the storage of messages which ensures reliability and aggregating of observation totals
+Low latency is not necessary due to the low frequency of sensing required. Large flows, energy efficiency is not imperative as the device is designed for indoor use where wired power is available. 
+Data transferred is not highly sensitive or personally identifiable, so baisc security or no default encryption is not a concern.
 
 ## Areas of Improvement
-The sensor is working and is selecting RGB values based off of the PPM reading in the serial output. The current bounds were 600 - 1000 - 1500 ppm this seems fairly high as the current average is ~400. I then implemented a traffic light system: green (good ventilation, <450 PPM), orange (consider ventilating, 451-750 PPM), red (ventilate now, >751 PPM). Readings have been tweaked to run every 10 seconds to prevent spam and only register when changes are over 50ppm. In practice readings should be hourly.
-<img width="954" height="561" alt="image" src="https://github.com/user-attachments/assets/b6771a0a-9750-4189-b10c-3c15db77a52c" />
-
+- Calibration of sensor to the enviornment: adjusting sensing timings, zone size and entry / exit logic depending on where the sensor is located.
+- Multiple people sensing
+- Zone definitions
+- Ability to add multiple sensors
 “Don’t assume your measurements are valid” – Duncan Wilson
 
 - **Reliability and validity of readings:** Multiple sensors, fine tune sensor positioning in room
