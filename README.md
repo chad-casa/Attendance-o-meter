@@ -161,9 +161,11 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 8. Link sensor readings in serial monitor to LCD Display changes
 9. Send people counting changes to CETools MQTT Broker and observe topic (6) on MQTT Explorer
 10. Save historic readings and display count on the LCD Screen
-    
+
 **Functional Demo Output**
+
 <img width="402" height="713" alt="image" src="https://github.com/user-attachments/assets/258557ba-dd41-4316-87f6-80a9c95ec08f" />
+
 <img width="535" height="714" alt="image" src="https://github.com/user-attachments/assets/1f8f1aea-23e6-4892-b145-8ffb8302c867" />
 
 **Future Plans**
