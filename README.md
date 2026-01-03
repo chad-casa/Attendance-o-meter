@@ -154,17 +154,17 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 1. Zine mind mapping my product thesis
 2. Product component selection
 3. Product component assembly
-4. Functional testing of components using Arduino sketch examples (Blink, WIFININA AP_SimpleWebserver, ScioSense_ENS16X)
-5. Wired up a breadboard and CO2 sensor to evaluate whether my chosen sensor works to monitor ppm
+4. Functional testing of components using Arduino sketch examples (Blink, WIFININA,  [MQTT Simple](Tests/mkr1010_mqtt_simple.ino), [Waveshare_LCD1602_RGB.h](Tests/Waveshare_LCD1602_RGB.cpp) )
+5. Wired up a breadboard and mmwave sensor to evaluate whether my chosen sensor works to monitor motion
 6. Test the project [Luminaire script](https://github.com/ucl-casa-ce/casa0014/blob/cc7aed6253ad8d2e7b3fdea0c4e44cc227731e9e/vespera/luminaire_mkr1010_controller/luminaire_mkr1010_controller.ino) from Duncan Wilson, CASA
-7. Consolidate ScioSense sketch with Luminaire script
-8. Connect my device To MQTT gateway
-9. Link sensor readings in serial monitor to RGB LED changes
-10. Send RGB changes to Vespera online tool on topic 6 (my designated channel)
-11. Save historic readings on the Vespera light to illustrate 1/hour - 3 Neopixel strips coloured represent 1 hour
+7. Connect my device To MQTT gateway
+8. Link sensor readings in serial monitor to LCD Display changes
+9. Send people counting changes to CETools MQTT Broker and observe topic (6) on MQTT Explorer
+10. Save historic readings and display count on the LCD Screen
     
 **Functional Demo Output**
-<img width="932" height="530" alt="image" src="https://github.com/user-attachments/assets/25f92f11-6e9c-4a97-bbd3-a7442d25e769" />
+<img width="402" height="713" alt="image" src="https://github.com/user-attachments/assets/258557ba-dd41-4316-87f6-80a9c95ec08f" />
+<img width="535" height="714" alt="image" src="https://github.com/user-attachments/assets/1f8f1aea-23e6-4892-b145-8ffb8302c867" />
 
 **Future Plans**
 1. Add multiple sensors at different heights and positions into the network to ensure accurate readings
@@ -202,8 +202,8 @@ Data transferred is not highly sensitive or personally identifiable, so basic se
 - **Wireless:** Consider how to make the IoT system wireless or low power for greater versatility in use cases
 
 # Sources: 
-+ **Base code** - Arduino template libraries* [SPI, WIFININA, PubSubCLient,Arduino_secrets,Utility/wifi_drv,Wire,ScioSense_ENS160] 
-+ **Base code** - LCD Display
++ **Base code** - Arduino template libraries* [SPI, WIFININA, PubSubCLient,Arduino_secrets,Utility/wifi_drv, Wire.h] 
++ **Base code** - LCD Display [Waveshare_LCD1602_RGB.h](Tests/Waveshare_LCD1602_RGB.cpp) 
 + **Base code** - Attendance-o-meter - Chad Barrett, Arduino Libraries* and [Claude.AI](https://claude.ai/)
 + **Sensor Set-up** - https://wiki.seeedstudio.com/mmwave_for_xiao_arduino/ 
 + **How to merge sketches** - [Claude.AI](https://claude.ai/)
