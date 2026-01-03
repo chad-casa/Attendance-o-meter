@@ -180,33 +180,30 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 - Device is placed by room entry point where subject movement from NEAR to FAR Zone = Entry (in) and movement FAR to NEAR Zone = Exit (out)
 - Good WI-FI signal
 - Access to wired power
-- Data privacy is not an important risk
+- Data privacy of target observed and location observed is not an important risk
 
 ## Why Arduino MKR1010?
-+ Wifi connectivity
-+ Open source
++ Wifi connectivity for future virutal dashboard visualisation and connectivity
++ Open source scalability
 + Low cost
   
 ## Why MQTT?
-**Message Queue Telemetry Transport** is a publish and subscribe model protocol where the broker decouples senders and receivers, so they don’t need to know about one another. Benefits for People counting, small message size and continuous connection. The publish – subscribe model enables the storage of messages which ensures reliability and aggregating of observation totals
+**Message Queue Telemetry Transport** is a publish and subscribe model protocol where the broker decouples senders and receivers, so they don’t need to know about one another. Benefits for People counting, small message size and continuous connection. The publish – subscribe model enables the storage of messages which ensures reliability and aggregating of area observation totals of in and out.
 Low latency is not necessary due to the low frequency of sensing required. Large flows, energy efficiency is not imperative as the device is designed for indoor use where wired power is available. 
-Data transferred is not highly sensitive or personally identifiable, so baisc security or no default encryption is not a concern.
+Data transferred is not highly sensitive or personally identifiable, so basic security or no default encryption is not a concern.
 
 ## Areas of Improvement
-- Calibration of sensor to the enviornment: adjusting sensing timings, zone size and entry / exit logic depending on where the sensor is located.
-- Multiple people sensing
-- Zone definitions
-- Ability to add multiple sensors
-“Don’t assume your measurements are valid” – Duncan Wilson
-
-- **Reliability and validity of readings:** Multiple sensors, fine tune sensor positioning in room
-- **Relevance of readings:** Consider relevant thresholds for CO2 colour change
+- **Reliability and validity of readings:** Multiple sensors may be required to observe multiple targets entering and exit the detection area - Computer vision and camera's may be a more accurate alternative
+- **Casing:** Test robust alternatives to use of foil to prevent readings behind sensor to restrict the observation area to infront of the sensor.
+- **Calibration and Accuracy:**  Fine tune sensor positioning in room, size of detection area and observation window duration
+- **Logic:** Entry and exit logic relevance depends on the room layout
+- **Accessibility:** Link MQTT feed to virtual display in Grafana Consider relevant thresholds for motion detection
 - **Cost of measurement:** Consider appropriate cadence of measurement
 - **Wireless:** Consider how to make the IoT system wireless or low power for greater versatility in use cases
 
 # Sources: 
 + **Base code** - Arduino template libraries* [SPI, WIFININA, PubSubCLient,Arduino_secrets,Utility/wifi_drv,Wire,ScioSense_ENS160] 
-+ **Base code** - Luminaire controller and MQTT Simple code by [Duncan Wilson](https://github.com/ucl-casa-ce/casa0014/blob/cc7aed6253ad8d2e7b3fdea0c4e44cc227731e9e/vespera/luminaire_mkr1010_controller/luminaire_mkr1010_controller.ino) (https://github.com/ucl-casa-ce/casa0014/tree/main/vespera)
-+ **Wiring** - https://cdn-learn.adafruit.com/downloads/pdf/adafruit-ens160-mox-gas-sensor.pdf
++ **Base code** - LCD Display
++ **Base code** - Attendance-o-meter - Chad Barrett, Arduino Libraries* and [Claude.AI](https://claude.ai/)
++ **Sensor Set-up** - https://wiki.seeedstudio.com/mmwave_for_xiao_arduino/ 
 + **How to merge sketches** - [Claude.AI](https://claude.ai/)
-+ **CO2 reading to RGB** - Chad Barrett, Arduino Libraries* and [Claude.AI](https://claude.ai/)
