@@ -164,7 +164,7 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 
 **Functional Demo Output**
 
-<img width="402" height="713" alt="image" src="https://github.com/user-attachments/assets/258557ba-dd41-4316-87f6-80a9c95ec08f" />
+https://github.com/user-attachments/assets/ea76f82a-160e-40a6-9bf8-68bac4892b36
 
 <img width="535" height="714" alt="image" src="https://github.com/user-attachments/assets/1f8f1aea-23e6-4892-b145-8ffb8302c867" />
 
