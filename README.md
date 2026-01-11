@@ -156,8 +156,8 @@ In the case of Project Attendance-o-meter, we develop our own IoT system where:
 3. Product component assembly
 4. Functional testing of components using Arduino sketch examples (Blink, WIFININA,  [MQTT Simple](Tests/mkr1010_mqtt_simple.ino), [Waveshare_LCD1602_RGB.h](Tests/Waveshare_LCD1602_RGB.cpp) )
 5. Wired up a breadboard and mmwave sensor to evaluate whether my chosen sensor works to monitor motion
-6. Test the project [Luminaire script](https://github.com/ucl-casa-ce/casa0014/blob/cc7aed6253ad8d2e7b3fdea0c4e44cc227731e9e/vespera/luminaire_mkr1010_controller/luminaire_mkr1010_controller.ino) from Duncan Wilson, CASA
-7. Connect my device To MQTT gateway
+6. Test the project [Attendance-o-meter script](Arduino_code/Attendance-o-meter.ino)
+7. Connect the device To MQTT gateway (mqtt.cetools.org)
 8. Link sensor readings in serial monitor to LCD Display changes
 9. Send people counting changes to CETools MQTT Broker and observe topic (6) on MQTT Explorer
 10. Save historic readings and display count on the LCD Screen
